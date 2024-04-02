@@ -1,38 +1,56 @@
-import * as theme from '../dist/index.js'
-import fs from 'fs'
+import * as theme from "../dist/index.js";
+import fs from "fs";
 
 const toCssCasting = (str) => {
-    return str.replace(/([a-z])(\d)/, "$1-$2")
-        .replace(/([A-Z])/g, "-$1")
-        .toLowerCase()
-}
+  return str
+    .replace(/([a-z])(\d)/, "$1-$2")
+    .replace(/([A-Z])/g, "-$1")
+    .toLowerCase();
+};
 const generateThemeCssVariables = () => {
+  const cssString = [];
 
-   const cssString = []
+  Object.entries(theme.vars).forEach(([key, value]) => {
+    if (key === "colors") {
+      Object.entries(value.$static).forEach(([colorKey, colorValue]) => {
+        if (colorKey === "light") {
+          const selector = ":root";
 
-    Object.entries(theme.vars).forEach(([key, value]) => {
-        if(key === "colors") {
-            Object.entries(value.$static).forEach(([colorKey, colorValue]) => {
-                if(colorKey === 'light') {
-                    const selector = ':root'
-
-                    const cssVariables = Object.entries(colorValue).map(([mainKey, mainValue]) => {
-                        return Object.entries(mainValue).map(([subKey, subValue]) => {
-                            return `--${toCssCasting(mainKey)}-${toCssCasting(subKey)}: ${subValue};`
-                        }).join('\n')
-                    }).join('\n')
-
-                    cssString.push(`${selector} {\n${cssVariables}\n}`)
-                }
+          const cssVariables = Object.entries(colorValue)
+            .map(([mainKey, mainValue]) => {
+              return Object.entries(mainValue)
+                .map(([subKey, subValue]) => {
+                  return `--${toCssCasting(mainKey)}-${toCssCasting(subKey)}: ${subValue};`;
+                })
+                .join("\n");
             })
+            .join("\n");
+
+          cssString.push(`${selector} {\n${cssVariables}\n}`);
+        } else if (colorKey === "dark") {
+          const selector = ":root .theme-dark";
+
+          const cssVariables = Object.entries(colorValue)
+            .map(([mainKey, mainValue]) => {
+              return Object.entries(mainValue)
+                .map(([subKey, subValue]) => {
+                  return `--${toCssCasting(mainKey)}-${toCssCasting(subKey)}: ${subValue};`;
+                })
+                .join("\n");
+            })
+            .join("\n");
+
+          cssString.push(`${selector} {\n${cssVariables}\n}`);
         }
-    })
-    return cssString
-}
+      });
+    }
+  });
+  return cssString;
+};
 
 const generateThemeCss = () => {
-    const variables = generateThemeCssVariables()
-    fs.writeFileSync('dist/themes.css', [...variables].join('\n'))
-}
+  const variables = generateThemeCssVariables();
+  fs.writeFileSync("dist/themes.css", [...variables].join("\n"));
+};
 
-generateThemeCss()
+generateThemeCss();
