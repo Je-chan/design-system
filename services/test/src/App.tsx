@@ -2,10 +2,11 @@ import React from "react";
 import logo from "./logo.svg";
 import "./App.css";
 import { ThemeProvider } from "@emotion/react";
-import { vars } from "@mg/themes";
+import { vars, classes } from "@mg/themes";
 import styled from "@emotion/styled";
 // @ts-ignore
 const Text = styled.p`
+  ${classes.typography.heading["4xl"]}
   color: ${vars.colors.$static.light.red[500]};
 `;
 
