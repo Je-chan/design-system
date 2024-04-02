@@ -16,7 +16,8 @@ function View() {
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
         <Text>
-          Edit <code>src/App.tsx</code> and save to reload.
+          FONT COLOR : {vars.colors.$static.light.red[500]}
+          {vars.box.radi.base}
         </Text>
         <a
           className="App-link"

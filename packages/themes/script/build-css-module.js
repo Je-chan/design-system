@@ -45,7 +45,7 @@ const generateThemeCssVariables = () => {
       });
     }
 
-    if (key === "typography") {
+    if (key === "typography" || key === "box") {
       const selector = ":root";
 
       const cssVariables = Object.entries(value)
