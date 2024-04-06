@@ -2,10 +2,19 @@
   "name": "design-system",
   "version": "1.0.0",
   "description": "디자인 시스템",
+  "workspaces": [
+    "packages/**/*",
+    "services/**/*"
+  ],
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build": "nx build",
+    "graph": "nx run-many --target=build --graph"
   },
   "author": "",
-  "license": "ISC"
+  "license": "ISC",
+  "packageManager": "yarn@4.1.1",
+  "devDependencies": {
+    "nx": "^18.2.3"
+  }
 }
