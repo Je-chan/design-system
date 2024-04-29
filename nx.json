@@ -8,16 +8,22 @@
     "libsDir": "packages"
   },
   "tasksRunnerOptions": {
-        "default": {
-        "runner": "nx/tasks-runner/default",
-             "options": {
-             "cacheableOperations": ["build"]
-             }
-        }
-    },
+    "default": {
+      "runner": "nx/tasks-runners/default",
+      "options": {
+        "cacheableOperations": [
+          "build",
+          "test",
+          "dev"
+        ]
+      }
+    }
+  },
   "targetDefaults": {
     "build": {
-      "dependsOn": ["^build"]
+      "dependsOn": [
+        "^build"
+      ]
     }
   }
 }

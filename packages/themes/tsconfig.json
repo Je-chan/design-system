@@ -1,14 +1,6 @@
 {
+  "extends": "../../tsconfig.base.json",
   "compilerOptions": {
-    "outDir": "./dist",
-    "target": "ESNext",
-    "module": "ESNext",
-    "lib": ["ESNext", "DOM"],
-
-    // tsconfig 에서 기본적으로 제공해주고 있지 않음
-    "declaration": true,
-    "strict": true,
-    "moduleResolution": "node",
-    "jsx": "react-jsx"
+    "outDir": "./dist"
   }
 }

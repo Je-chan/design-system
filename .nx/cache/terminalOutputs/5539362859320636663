@@ -1,0 +1,20 @@
+
+node:internal/process/esm_loader:34
+      internalBinding('errors').triggerUncaughtException(
+                                ^
+Error: Your application tried to access esbuild, but it isn't declared in your dependencies; this makes the require call ambiguous and unsound.
+
+Required package: esbuild (via "esbuild/package.json")
+Required by: /Users/je/Desktop/FastCampus/design-system/packages/themes/build.js
+
+    at makeError (/Users/je/Desktop/FastCampus/design-system/.pnp.cjs:14529:34)
+    at resolveToUnqualified (/Users/je/Desktop/FastCampus/design-system/.pnp.cjs:16167:21)
+    at Object.resolveToUnqualified (/Users/je/Desktop/FastCampus/design-system/.pnp.cjs:16357:26)
+    at resolve$1 (file:///Users/je/Desktop/FastCampus/design-system/.pnp.loader.mjs:1993:31)
+[90m    at nextResolve (node:internal/modules/esm/hooks:865:28)[39m
+[90m    at Hooks.resolve (node:internal/modules/esm/hooks:303:30)[39m
+[90m    at MessagePort.handleMessage (node:internal/modules/esm/worker:196:24)[39m
+[90m    at [nodejs.internal.kHybridDispatch] (node:internal/event_target:826:20)[39m
+[90m    at exports.emitMessage (node:internal/per_context/messageport:23:28)[39m
+
+Node.js v20.11.0

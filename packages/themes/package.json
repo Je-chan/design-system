@@ -14,12 +14,12 @@
   "scripts": {
     "build": "yarn clean && yarn build:js && yarn build:type && yarn build:css",
     "build:js": "node build.js",
-    "build:type": "tsc --emitDeclarationOnly",
-    "build:css": "node ./script/build-css-module.js",
+    "build:type": "yarn tsc --emitDeclarationOnly",
+    "build:css": "node ./scripts/build-css-module.js",
     "clean": "rm -rf dist"
   },
   "devDependencies": {
-    "esbuild": "^0.16.17",
-    "typescript": "^5.4.3"
+    "@mg/esbuild-config": "workspace:^",
+    "typescript": "^5.2.2"
   }
 }

@@ -1,0 +1,25 @@
+(node:11125) ExperimentalWarning: Use `importAttributes` instead of `importAssertions`
+(Use `node --trace-warnings ...` to show where the warning was created)
+(node:11125) ExperimentalWarning: Importing JSON modules is an experimental feature and might change at any time
+(Use `node --trace-warnings ...` to show where the warning was created)
+
+node:internal/process/esm_loader:34
+      internalBinding('errors').triggerUncaughtException(
+                                ^
+Error: Qualified path resolution failed: we looked for the following paths, but none could be accessed.
+
+Source path: /Users/je/Desktop/FastCampus/design-system/packages/themes/scripts/build-css-module.js
+Not found: /Users/je/Desktop/FastCampus/design-system/packages/themes/scripts/build-css-module.js
+
+    at makeError (/Users/je/Desktop/FastCampus/design-system/.pnp.cjs:6838:34)
+    at resolveUnqualified (/Users/je/Desktop/FastCampus/design-system/.pnp.cjs:8580:13)
+    at resolveRequest (/Users/je/Desktop/FastCampus/design-system/.pnp.cjs:8620:14)
+    at Object.resolveRequest (/Users/je/Desktop/FastCampus/design-system/.pnp.cjs:8676:26)
+    at resolve$1 (file:///Users/je/Desktop/FastCampus/design-system/.pnp.loader.mjs:2005:21)
+[90m    at nextResolve (node:internal/modules/esm/hooks:865:28)[39m
+[90m    at Hooks.resolve (node:internal/modules/esm/hooks:303:30)[39m
+[90m    at MessagePort.handleMessage (node:internal/modules/esm/worker:196:24)[39m
+[90m    at [nodejs.internal.kHybridDispatch] (node:internal/event_target:826:20)[39m
+[90m    at exports.emitMessage (node:internal/per_context/messageport:23:28)[39m
+
+Node.js v20.11.0
