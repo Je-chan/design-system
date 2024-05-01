@@ -1737,6 +1737,15 @@
         "hash": "10c0/361bb3e964ec5133fa40644a0b942279ed5df1949f21321d77de79f48b728d39253e5ce0408c9c17e4e0fd95ca7899da36841686393b9f7a1e209916e9381a3c"
       }
     },
+    "npm:@types/react-dom@18.3.0": {
+      "type": "npm",
+      "name": "npm:@types/react-dom@18.3.0",
+      "data": {
+        "version": "18.3.0",
+        "packageName": "@types/react-dom",
+        "hash": "10c0/6c90d2ed72c5a0e440d2c75d99287e4b5df3e7b011838cdc03ae5cd518ab52164d86990e73246b9d812eaf02ec351d74e3b4f5bd325bf341e13bf980392fd53b"
+      }
+    },
     "npm:@types/react@18.3.1": {
       "type": "npm",
       "name": "npm:@types/react@18.3.1",
@@ -5472,6 +5481,15 @@
         "hash": "10c0/48eb73cf71e10841c2a61b6b06ab81da9fffa9876134c239bfdebcf348ce2a47e56b146338e35dfb03512c85966bfc9a53844fc56bc50154e71f8daee59ff6f0"
       }
     },
+    "npm:react-dom@18.3.1": {
+      "type": "npm",
+      "name": "npm:react-dom@18.3.1",
+      "data": {
+        "version": "18.3.1",
+        "packageName": "react-dom",
+        "hash": "10c0/a752496c1941f958f2e8ac56239172296fcddce1365ce45222d04a1947e0cc5547df3e8447f855a81d6d39f008d7c32eab43db3712077f09e3f67c4874973e85"
+      }
+    },
     "npm:react-is@16.13.1": {
       "type": "npm",
       "name": "npm:react-is@16.13.1",
@@ -5515,6 +5533,15 @@
         "version": "2.2.1",
         "packageName": "react-style-singleton",
         "hash": "10c0/6d66f3bdb65e1ec79089f80314da97c9a005087a04ee034255a5de129a4c0d9fd0bf99fa7bf642781ac2dc745ca687aae3de082bd8afdd0d117bc953241e15ad"
+      }
+    },
+    "npm:react@18.3.1": {
+      "type": "npm",
+      "name": "npm:react@18.3.1",
+      "data": {
+        "version": "18.3.1",
+        "packageName": "react",
+        "hash": "10c0/283e8c5efcf37802c9d1ce767f302dd569dd97a70d9bb8c7be79a789b9902451e0d16334b05d73299b20f048cbc3c7d288bbbde10b701fa194e2089c237dbea3"
       }
     },
     "npm:readable-stream@3.6.2": {
@@ -5731,6 +5758,15 @@
         "version": "2.1.2",
         "packageName": "safer-buffer",
         "hash": "10c0/7e3c8b2e88a1841c9671094bbaeebd94448111dd90a81a1f606f3f67708a6ec57763b3b47f06da09fc6054193e0e6709e77325415dc8422b04497a8070fa02d4"
+      }
+    },
+    "npm:scheduler@0.23.2": {
+      "type": "npm",
+      "name": "npm:scheduler@0.23.2",
+      "data": {
+        "version": "0.23.2",
+        "packageName": "scheduler",
+        "hash": "10c0/26383305e249651d4c58e6705d5f8425f153211aef95f15161c151f7b8de885f24751b377e4a0b3dd42cce09aad3f87a61dab7636859c0d89b7daf1a1e2a5c78"
       }
     },
     "npm:semver@7.5.3": {
@@ -9155,6 +9191,31 @@
     {
       "source": "npm:@types/node@18.19.31",
       "target": "npm:undici-types@5.26.5",
+      "type": "static"
+    },
+    {
+      "source": "npm:@types/react-dom@18.3.0",
+      "target": "npm:@types/react@18.3.1",
+      "type": "static"
+    },
+    {
+      "source": "npm:@types/react@18.3.1",
+      "target": "npm:@types/prop-types@15.7.12",
+      "type": "static"
+    },
+    {
+      "source": "npm:@types/react@18.3.1",
+      "target": "npm:csstype@3.1.3",
+      "type": "static"
+    },
+    {
+      "source": "npm:@types/react@18.3.1",
+      "target": "npm:@types/prop-types@15.7.12",
+      "type": "static"
+    },
+    {
+      "source": "npm:@types/react@18.3.1",
+      "target": "npm:csstype@3.1.3",
       "type": "static"
     },
     {
@@ -14368,6 +14429,11 @@
       "type": "static"
     },
     {
+      "source": "npm:loose-envify@1.4.0",
+      "target": "npm:js-tokens@4.0.0",
+      "type": "static"
+    },
+    {
       "source": "npm:lru-cache@5.1.1",
       "target": "npm:yallist@3.1.1",
       "type": "static"
@@ -15418,6 +15484,16 @@
       "type": "static"
     },
     {
+      "source": "npm:react-dom@18.3.1",
+      "target": "npm:loose-envify@1.4.0",
+      "type": "static"
+    },
+    {
+      "source": "npm:react-dom@18.3.1",
+      "target": "npm:scheduler@0.23.2",
+      "type": "static"
+    },
+    {
       "source": "npm:react-remove-scroll-bar@2.3.6",
       "target": "npm:react-style-singleton@2.2.1",
       "type": "static"
@@ -15465,6 +15541,11 @@
     {
       "source": "npm:react-style-singleton@2.2.1",
       "target": "npm:tslib@2.6.2",
+      "type": "static"
+    },
+    {
+      "source": "npm:react@18.3.1",
+      "target": "npm:loose-envify@1.4.0",
       "type": "static"
     },
     {
@@ -15710,6 +15791,11 @@
     {
       "source": "npm:safe-regex-test@1.0.3",
       "target": "npm:is-regex@1.1.4",
+      "type": "static"
+    },
+    {
+      "source": "npm:scheduler@0.23.2",
+      "target": "npm:loose-envify@1.4.0",
       "type": "static"
     },
     {
